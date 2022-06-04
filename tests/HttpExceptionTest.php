@@ -6,8 +6,10 @@ namespace Thingston\Tests\Http\Exception;
 
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
+use Thingston\Http\Exception\BadRequestException;
 use Thingston\Http\Exception\HttpException;
 use Thingston\Http\Exception\HttpExceptionInterface;
+use Thingston\Http\Exception\InternalServerErrorException;
 
 final class HttpExceptionTest extends TestCase
 {
@@ -49,5 +51,13 @@ final class HttpExceptionTest extends TestCase
     {
         $this->expectException(HttpExceptionInterface::class);
         new HttpException('Some error', [], [], 200);
+    }
+
+    public function testBadRequestException(): void
+    {
+        $exception = new BadRequestException('Some error');
+
+        $this->assertSame($exception::STATUS_CODE, $exception->getStatusCode());
+        $this->assertSame($exception::REASON_PHRASE, $exception->getReasonPhrase());
     }
 }
