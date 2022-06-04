@@ -1,0 +1,12 @@
+composer.phar
+/vendor/
+/.phpcs-cache
+/phpcs.xml
+/phpunit.xml
+.phpunit.cache
+.phpunit.result.cache
+/.vscode
+/.idea
+/phpstan.neon
+/coverage.xml
+/coverage/

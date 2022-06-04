@@ -1,0 +1,79 @@
+{
+    "name": "thingston/http-exception",
+    "description": "A set of custom PHP Exception based on HTTP Status Code.",
+    "keywords": ["php", "http", "exception"],
+    "homepage": "https://github.com/thingston/http-exception",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pedro Ferreira",
+            "email": "pedro@thingston.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/thingston/http-exception/issues",
+        "source": "https://github.com/thingston/http-exception",
+        "docs": "https://github.com/thingston/http-exception/wiki"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.5",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
+        "symfony/var-dumper": "^6.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Thingston\\Http\\Exception\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Thingston\\Tests\\Http\\Exception\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [],
+        "post-update-cmd": [],
+        "test": "phpunit --color=always",
+        "coverage:text": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --color=always --coverage-text"
+        ],
+        "coverage:clover": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --color=always --coverage-clover=coverage.xml"
+        ],
+        "coverage:html": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --color=always --coverage-html=coverage"
+        ],
+        "coverage:check": [
+            "@coverage:clover",
+            "php .github/check_coverage.php coverage.xml"
+        ],
+        "analyze": "phpstan",
+        "cs": "phpcs",
+        "cbf": "phpcbf",
+        "checks": [
+            "@cs",
+            "@analyze",
+            "@coverage:check"
+        ]
+    }
+}
