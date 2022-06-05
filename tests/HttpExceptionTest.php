@@ -6,12 +6,16 @@ namespace Thingston\Tests\Http\Exception;
 
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
+use Thingston\Http\Exception\BadGatewayException;
 use Thingston\Http\Exception\BadRequestException;
 use Thingston\Http\Exception\ExpectationFailedException;
 use Thingston\Http\Exception\ForbiddenException;
+use Thingston\Http\Exception\GatewayTimeoutException;
 use Thingston\Http\Exception\GoneException;
 use Thingston\Http\Exception\HttpException;
 use Thingston\Http\Exception\HttpExceptionInterface;
+use Thingston\Http\Exception\HttpVersionNotSupportedException;
+use Thingston\Http\Exception\InternalServerErrorException;
 use Thingston\Http\Exception\MethodNotAllowedException;
 use Thingston\Http\Exception\NotAcceptableException;
 use Thingston\Http\Exception\NotFoundException;
@@ -19,6 +23,7 @@ use Thingston\Http\Exception\PayloadTooLargeException;
 use Thingston\Http\Exception\PreconditionFailedException;
 use Thingston\Http\Exception\RangeNotSatisfiableException;
 use Thingston\Http\Exception\RequestHeaderFieldsTooLargeException;
+use Thingston\Http\Exception\ServiceUnavailableException;
 use Thingston\Http\Exception\TooManyRequestsException;
 use Thingston\Http\Exception\UnauthorizedException;
 use Thingston\Http\Exception\UnavailableForLegalReasonsException;
@@ -190,6 +195,46 @@ final class HttpExceptionTest extends TestCase
     public function testUnavailableForLegalReasonsException(): void
     {
         $exception = new UnavailableForLegalReasonsException('Some error');
+
+        $this->assertSame($exception::STATUS_CODE, $exception->getStatusCode());
+        $this->assertSame($exception::REASON_PHRASE, $exception->getReasonPhrase());
+    }
+
+    public function testInternalServerErrorException(): void
+    {
+        $exception = new InternalServerErrorException('Some error');
+
+        $this->assertSame($exception::STATUS_CODE, $exception->getStatusCode());
+        $this->assertSame($exception::REASON_PHRASE, $exception->getReasonPhrase());
+    }
+
+    public function testBadGatewayException(): void
+    {
+        $exception = new BadGatewayException('Some error');
+
+        $this->assertSame($exception::STATUS_CODE, $exception->getStatusCode());
+        $this->assertSame($exception::REASON_PHRASE, $exception->getReasonPhrase());
+    }
+
+    public function testServiceUnavailableException(): void
+    {
+        $exception = new ServiceUnavailableException('Some error');
+
+        $this->assertSame($exception::STATUS_CODE, $exception->getStatusCode());
+        $this->assertSame($exception::REASON_PHRASE, $exception->getReasonPhrase());
+    }
+
+    public function testGatewayTimeoutException(): void
+    {
+        $exception = new GatewayTimeoutException('Some error');
+
+        $this->assertSame($exception::STATUS_CODE, $exception->getStatusCode());
+        $this->assertSame($exception::REASON_PHRASE, $exception->getReasonPhrase());
+    }
+
+    public function testHttpVersionNotSupportedException(): void
+    {
+        $exception = new HttpVersionNotSupportedException('Some error');
 
         $this->assertSame($exception::STATUS_CODE, $exception->getStatusCode());
         $this->assertSame($exception::REASON_PHRASE, $exception->getReasonPhrase());
