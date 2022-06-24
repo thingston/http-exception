@@ -87,9 +87,9 @@ class ExceptionHandler implements ExceptionHandlerInterface
         $context = $logDetails ? $exception->getTrace() : [];
 
         if ($exception instanceof HttpExceptionInterface && 500 > $exception->getStatusCode()) {
-            $this->getLogger()->error($message, $context);
+            $this->getLogger()->warning($message, $context);
         } else {
-            $this->getLogger()->critical($message, $context);
+            $this->getLogger()->error($message, $context);
         }
     }
 
