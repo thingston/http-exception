@@ -1,0 +1,60 @@
+name: Update Composer
+
+on:
+  schedule:
+    - cron: '33 3 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v3
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Update dependencies
+      run: |
+        composer update --prefer-dist --no-progress
+
+    - name: Run test script
+      run: composer run-script test
+
+    - name: Commit changes
+      run: |
+        DIFF=$(git --no-pager diff)
+        if [ ! $DIFF ] ; then
+          echo "Nothing to commit."
+          exit 0
+        fi
+        USER_NAME=$(git log -1 --pretty=format:'%an')
+        USER_EMAIL=$(git log -1 --pretty=format:'%ae')
+        git config --global user.name "$USER_NAME"
+        git config --global user.email "$USER_EMAIL"
+        echo "Operating as $USER_NAME <$USER_EMAIL>"
+        git fetch --prune --unshallow
+        VERSION=$(git describe --tags --abbrev=0)
+        echo "Current version is $VERSION"
+        a=( ${VERSION//./ } )
+        ((a[2]++))
+        TAG="${a[0]}.${a[1]}.${a[2]}"
+        echo "Updating to version $TAG"
+        git commit -a -m "Update dependencies ($TAG)"
+        git push
+        git tag -a $TAG -m $TAG
+        git push --tags
+        echo "Done!"
