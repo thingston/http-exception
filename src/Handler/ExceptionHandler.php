@@ -15,6 +15,7 @@ use Thingston\Http\Exception\InternalServerErrorException;
 use Thingston\Http\Exception\Renderer\ExceptionRendererResolver;
 use Thingston\Http\Exception\Renderer\ExceptionRendererResolverInterface;
 use Thingston\Http\Exception\Renderer\JsonExceptionRenderer;
+use Thingston\Log\LogManager;
 use Thingston\Settings\SettingsInterface;
 use Throwable;
 
@@ -51,8 +52,7 @@ class ExceptionHandler implements ExceptionHandlerInterface
     private function getLogger(): LoggerInterface
     {
         if (null === $this->logger) {
-            $this->logger = new \Monolog\Logger(self::class);
-            $this->logger->pushHandler(new \Monolog\Handler\StreamHandler(sys_get_temp_dir() . '/thingston.log'));
+            $this->logger = new LogManager();
         }
 
         return $this->logger;
@@ -87,9 +87,9 @@ class ExceptionHandler implements ExceptionHandlerInterface
         $context = $logDetails ? $exception->getTrace() : [];
 
         if ($exception instanceof HttpExceptionInterface && 500 > $exception->getStatusCode()) {
-            $this->getLogger()->error($message, $context);
+            $this->getLogger()->warning($message, $context);
         } else {
-            $this->getLogger()->critical($message, $context);
+            $this->getLogger()->error($message, $context);
         }
     }
 
