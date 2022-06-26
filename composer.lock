@@ -538,16 +538,16 @@
         },
         {
             "name": "thingston/settings",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/settings.git",
-                "reference": "9f8b6140c19f69d8bf3879517edc5d01e064155c"
+                "reference": "6c45ed517cccf280162c1fb1457d5de5b89ddeec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/settings/zipball/9f8b6140c19f69d8bf3879517edc5d01e064155c",
-                "reference": "9f8b6140c19f69d8bf3879517edc5d01e064155c",
+                "url": "https://api.github.com/repos/thingston/settings/zipball/6c45ed517cccf280162c1fb1457d5de5b89ddeec",
+                "reference": "6c45ed517cccf280162c1fb1457d5de5b89ddeec",
                 "shasum": ""
             },
             "require": {
@@ -589,7 +589,7 @@
                 "issues": "https://github.com/thingston/settings/issues",
                 "source": "https://github.com/thingston/settings"
             },
-            "time": "2022-06-21T14:15:30+00:00"
+            "time": "2022-06-25T16:33:02+00:00"
         }
     ],
     "packages-dev": [
