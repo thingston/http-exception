@@ -481,16 +481,16 @@
         },
         {
             "name": "thingston/log-manager",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/log-manager.git",
-                "reference": "60620a2f87ff462b349cee0756c0444618698736"
+                "reference": "ecd46cfc5d51f907ea5a2b52a3a461dd3a3da40f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/log-manager/zipball/60620a2f87ff462b349cee0756c0444618698736",
-                "reference": "60620a2f87ff462b349cee0756c0444618698736",
+                "url": "https://api.github.com/repos/thingston/log-manager/zipball/ecd46cfc5d51f907ea5a2b52a3a461dd3a3da40f",
+                "reference": "ecd46cfc5d51f907ea5a2b52a3a461dd3a3da40f",
                 "shasum": ""
             },
             "require": {
@@ -534,7 +534,7 @@
                 "issues": "https://github.com/thingston/log-manager/issues",
                 "source": "https://github.com/thingston/log-manager"
             },
-            "time": "2022-06-24T16:54:04+00:00"
+            "time": "2022-06-27T16:39:12+00:00"
         },
         {
             "name": "thingston/settings",
@@ -3543,5 +3543,5 @@
         "php": ">=8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
