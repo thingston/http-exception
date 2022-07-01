@@ -3418,16 +3418,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.4",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "aeb26297150c9605ac5c86084d749c72b7e78482"
+                "reference": "680c627cce5fcd54f1874f7216654a7609baea57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/aeb26297150c9605ac5c86084d749c72b7e78482",
-                "reference": "aeb26297150c9605ac5c86084d749c72b7e78482",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/680c627cce5fcd54f1874f7216654a7609baea57",
+                "reference": "680c627cce5fcd54f1874f7216654a7609baea57",
                 "shasum": ""
             },
             "require": {
@@ -3473,7 +3473,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2022-06-29T04:28:42+00:00"
+            "time": "2022-06-30T04:20:31+00:00"
         },
         {
             "name": "webmozart/assert",
