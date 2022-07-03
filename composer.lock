@@ -481,16 +481,16 @@
         },
         {
             "name": "thingston/log-manager",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/log-manager.git",
-                "reference": "ecd46cfc5d51f907ea5a2b52a3a461dd3a3da40f"
+                "reference": "f0328cb8698f57f60bb4dcea94b2cdfc47cab42b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/log-manager/zipball/ecd46cfc5d51f907ea5a2b52a3a461dd3a3da40f",
-                "reference": "ecd46cfc5d51f907ea5a2b52a3a461dd3a3da40f",
+                "url": "https://api.github.com/repos/thingston/log-manager/zipball/f0328cb8698f57f60bb4dcea94b2cdfc47cab42b",
+                "reference": "f0328cb8698f57f60bb4dcea94b2cdfc47cab42b",
                 "shasum": ""
             },
             "require": {
@@ -534,20 +534,20 @@
                 "issues": "https://github.com/thingston/log-manager/issues",
                 "source": "https://github.com/thingston/log-manager"
             },
-            "time": "2022-06-27T16:39:12+00:00"
+            "time": "2022-07-02T15:30:51+00:00"
         },
         {
             "name": "thingston/settings",
-            "version": "v1.3.2",
+            "version": "v1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/settings.git",
-                "reference": "5cc2483e87bba4a147bb82306bb02fff74d002ae"
+                "reference": "2f02044be4fc96817036ae623041f125d71aa153"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/settings/zipball/5cc2483e87bba4a147bb82306bb02fff74d002ae",
-                "reference": "5cc2483e87bba4a147bb82306bb02fff74d002ae",
+                "url": "https://api.github.com/repos/thingston/settings/zipball/2f02044be4fc96817036ae623041f125d71aa153",
+                "reference": "2f02044be4fc96817036ae623041f125d71aa153",
                 "shasum": ""
             },
             "require": {
@@ -589,7 +589,7 @@
                 "issues": "https://github.com/thingston/settings/issues",
                 "source": "https://github.com/thingston/settings"
             },
-            "time": "2022-06-27T16:13:30+00:00"
+            "time": "2022-07-02T15:07:25+00:00"
         }
     ],
     "packages-dev": [
