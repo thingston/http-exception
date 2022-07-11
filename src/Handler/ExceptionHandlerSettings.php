@@ -23,7 +23,7 @@ final class ExceptionHandlerSettings extends AbstractSettings
      */
     public function __construct(array $settings = [])
     {
-        parent::__construct([
+        parent::__construct(array_merge([
             self::DEBUG => (bool) ($settings[self::DEBUG] ?? false),
             self::LOG_ERRORS => (bool) ($settings[self::LOG_ERRORS] ?? true),
             self::LOG_DETAILS => (bool) ($settings[self::LOG_DETAILS] ?? false),
@@ -34,6 +34,6 @@ final class ExceptionHandlerSettings extends AbstractSettings
                 XmlExceptionRenderer::class,
                 PlainTextExceptionRenderer::class,
             ],
-        ]);
+        ], $settings));
     }
 }

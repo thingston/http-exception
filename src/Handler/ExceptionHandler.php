@@ -110,9 +110,14 @@ class ExceptionHandler implements ExceptionHandlerInterface
         $debug = $settings->has(ExceptionHandlerSettings::DEBUG)
             && $settings->get(ExceptionHandlerSettings::DEBUG);
 
-        $body = $this->getExceptionRendererResolver()
-            ->resolve($type)
-            ->render($exception, $debug);
+        $renderer = $this->getExceptionRendererResolver()->resolve($type);
+
+        if (empty($response->getHeader('content-type'))) {
+            $mime = $renderer::getMimeTypes()[0];
+            $response = $response->withAddedHeader('content-type', $mime);
+        }
+
+        $body = $renderer->render($exception, $debug);
 
         return $response->withBody(Utils::streamFor($body));
     }
