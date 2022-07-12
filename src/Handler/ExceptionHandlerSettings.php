@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Thingston\Http\Exception\Handler;
 
+use Thingston\Http\Exception\Renderer\ExceptionRendererInterface;
 use Thingston\Http\Exception\Renderer\HtmlExceptionRenderer;
 use Thingston\Http\Exception\Renderer\JsonExceptionRenderer;
 use Thingston\Http\Exception\Renderer\PlainTextExceptionRenderer;
@@ -15,6 +16,7 @@ final class ExceptionHandlerSettings extends AbstractSettings
     public const DEBUG = 'debug';
     public const LOG_ERRORS = 'logErrors';
     public const LOG_DETAILS = 'logDetails';
+    public const DEFAULT_MESSAGE = 'defaultMessage';
     public const DEFAULT_RENDERER = 'defaultRenderer';
     public const RENDERERS = 'renderers';
 
@@ -27,6 +29,7 @@ final class ExceptionHandlerSettings extends AbstractSettings
             self::DEBUG => (bool) ($settings[self::DEBUG] ?? false),
             self::LOG_ERRORS => (bool) ($settings[self::LOG_ERRORS] ?? true),
             self::LOG_DETAILS => (bool) ($settings[self::LOG_DETAILS] ?? false),
+            self::DEFAULT_MESSAGE => ExceptionRendererInterface::DEFAULT_MESSAGE,
             self::DEFAULT_RENDERER => JsonExceptionRenderer::class,
             self::RENDERERS => [
                 HtmlExceptionRenderer::class,

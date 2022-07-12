@@ -12,6 +12,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Log\LoggerInterface;
 use Thingston\Http\Exception\HttpExceptionInterface;
 use Thingston\Http\Exception\InternalServerErrorException;
+use Thingston\Http\Exception\Renderer\ExceptionRendererInterface;
 use Thingston\Http\Exception\Renderer\ExceptionRendererResolver;
 use Thingston\Http\Exception\Renderer\ExceptionRendererResolverInterface;
 use Thingston\Http\Exception\Renderer\JsonExceptionRenderer;
@@ -19,7 +20,7 @@ use Thingston\Log\LogManager;
 use Thingston\Settings\SettingsInterface;
 use Throwable;
 
-class ExceptionHandler implements ExceptionHandlerInterface
+final class ExceptionHandler implements ExceptionHandlerInterface
 {
     public function __construct(
         private ?SettingsInterface $settings = null,
@@ -93,6 +94,19 @@ class ExceptionHandler implements ExceptionHandlerInterface
         }
     }
 
+    private function getDefaultMessage(): string
+    {
+        $settings = $this->getSettings();
+
+        if (false === $settings->has(ExceptionHandlerSettings::DEFAULT_MESSAGE)) {
+            return ExceptionRendererInterface::DEFAULT_MESSAGE;
+        }
+
+        $defaultMessage = $settings->get(ExceptionHandlerSettings::DEFAULT_MESSAGE);
+
+        return is_string($defaultMessage) ? $defaultMessage : ExceptionRendererInterface::DEFAULT_MESSAGE;
+    }
+
     private function createResponse(ServerRequestInterface $request, Throwable $exception): ResponseInterface
     {
         $code = $exception instanceof HttpExceptionInterface ? $exception->getStatusCode() : 500;
@@ -107,6 +121,7 @@ class ExceptionHandler implements ExceptionHandlerInterface
         $type = $this->resolveContentType($request, $response);
 
         $settings = $this->getSettings();
+
         $debug = $settings->has(ExceptionHandlerSettings::DEBUG)
             && $settings->get(ExceptionHandlerSettings::DEBUG);
 
@@ -117,7 +132,7 @@ class ExceptionHandler implements ExceptionHandlerInterface
             $response = $response->withAddedHeader('content-type', $mime);
         }
 
-        $body = $renderer->render($exception, $debug);
+        $body = $renderer->render($exception, $debug, $this->getDefaultMessage());
 
         return $response->withBody(Utils::streamFor($body));
     }
