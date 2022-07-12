@@ -6,8 +6,10 @@ namespace Thingston\Http\Exception\Renderer;
 
 use Throwable;
 
-class XmlExceptionRenderer implements ExceptionRendererInterface
+final class XmlExceptionRenderer implements ExceptionRendererInterface
 {
+    use TitleRendererTrait;
+
     /**
      * @return array<string>
      */
@@ -16,43 +18,39 @@ class XmlExceptionRenderer implements ExceptionRendererInterface
         return ['text/xml'];
     }
 
-    public function render(Throwable $exception, bool $debug = false): string
+    public function render(Throwable $exception, bool $debug = false, ?string $defaultMessage = null): string
     {
         return sprintf(
             '<error>'
                 . '<message>%s</message>'
                 . '%s'
                 . '</error>',
-            $this->renderTitle($exception),
+            $this->renderTitle($exception, $debug, $defaultMessage ?? self::DEFAULT_MESSAGE),
             $this->renderBody($exception, $debug)
         );
     }
 
-    private function renderTitle(Throwable $exception): string
-    {
-        return '' !== $exception->getMessage()
-            ? $exception->getMessage() : 'An error ocurred';
-    }
-
     private function renderBody(Throwable $exception, bool $debug = false): string
     {
+        if (false === $debug) {
+            return '';
+        }
+
         $xml = '';
 
-        if ($debug) {
-            $xml .= sprintf(
-                '<code>%d</code>'
-                    . '<file>%s</file>'
-                    . '<line>%d</line>',
-                $exception->getCode(),
-                $exception->getFile(),
-                $exception->getLine()
-            );
+        $xml .= sprintf(
+            '<code>%d</code>'
+                . '<file>%s</file>'
+                . '<line>%d</line>',
+            $exception->getCode(),
+            $exception->getFile(),
+            $exception->getLine()
+        );
 
-            $xml .= $this->renderTrace($exception);
+        $xml .= $this->renderTrace($exception);
 
-            if ($exception->getPrevious()) {
-                $xml .= $this->renderPrevious($exception->getPrevious());
-            }
+        if ($exception->getPrevious()) {
+            $xml .= $this->renderPrevious($exception->getPrevious());
         }
 
         return $xml;
@@ -91,7 +89,7 @@ class XmlExceptionRenderer implements ExceptionRendererInterface
     {
         $xml = sprintf(
             '<previous><message>%s</message>%s</previous>',
-            $this->renderTitle($exception),
+            $exception->getMessage(),
             $this->renderTrace($exception)
         );
 

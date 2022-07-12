@@ -6,8 +6,10 @@ namespace Thingston\Http\Exception\Renderer;
 
 use Throwable;
 
-class HtmlExceptionRenderer implements ExceptionRendererInterface
+final class HtmlExceptionRenderer implements ExceptionRendererInterface
 {
+    use TitleRendererTrait;
+
     /**
      * @return array<string>
      */
@@ -16,45 +18,41 @@ class HtmlExceptionRenderer implements ExceptionRendererInterface
         return ['text/html'];
     }
 
-    public function render(Throwable $exception, bool $debug = false): string
+    public function render(Throwable $exception, bool $debug = false, ?string $defaultMessage = null): string
     {
         return sprintf(
             '<html>'
                 . '<head><title>%s</title></head>'
                 . '<body>%s</body>'
                 . '</html>',
-            $this->renderTitle($exception),
-            $this->renderBody($exception, $debug)
+            $this->renderTitle($exception, $debug, $defaultMessage ?? self::DEFAULT_MESSAGE),
+            $this->renderBody($exception, $debug, $defaultMessage ?? self::DEFAULT_MESSAGE)
         );
     }
 
-    private function renderTitle(Throwable $exception): string
+    private function renderBody(Throwable $exception, bool $debug, string $defaultMessage): string
     {
-        return '' !== $exception->getMessage()
-            ? $exception->getMessage() : 'An error ocurred';
-    }
+        $html = sprintf('<h1>%s</h1>', $this->renderTitle($exception, $debug, $defaultMessage));
 
-    private function renderBody(Throwable $exception, bool $debug = false): string
-    {
-        $html = sprintf('<h1>%s</h1>', $this->renderTitle($exception));
+        if (false === $debug) {
+            return $html;
+        }
 
-        if ($debug) {
-            $html .= sprintf(
-                '<dl>'
-                    . '<dt>Code</dt><dd>%d</dd>'
-                    . '<dt>File</dt><dd>%s</dd>'
-                    . '<dt>Line</dt><dd>%d</dd>'
-                    . '</dl>',
-                $exception->getCode(),
-                $exception->getFile(),
-                $exception->getLine()
-            );
+        $html .= sprintf(
+            '<dl>'
+                . '<dt>Code</dt><dd>%d</dd>'
+                . '<dt>File</dt><dd>%s</dd>'
+                . '<dt>Line</dt><dd>%d</dd>'
+                . '</dl>',
+            $exception->getCode(),
+            $exception->getFile(),
+            $exception->getLine()
+        );
 
-            $html .= $this->renderTrace($exception);
+        $html .= $this->renderTrace($exception);
 
-            if ($exception->getPrevious()) {
-                $html .= $this->renderPrevious($exception->getPrevious());
-            }
+        if ($exception->getPrevious()) {
+            $html .= $this->renderPrevious($exception->getPrevious());
         }
 
         return $html;
@@ -67,7 +65,7 @@ class HtmlExceptionRenderer implements ExceptionRendererInterface
 
     private function renderPrevious(Throwable $exception): string
     {
-        $html = sprintf('<h2>%s</h2>%s', $this->renderTitle($exception), $this->renderTrace($exception));
+        $html = sprintf('<h2>%s</h2>%s', $exception->getMessage(), $this->renderTrace($exception));
 
         if ($exception->getPrevious()) {
             $html .= $this->renderPrevious($exception->getPrevious());

@@ -6,8 +6,10 @@ namespace Thingston\Http\Exception\Renderer;
 
 use Throwable;
 
-class PlainTextExceptionRenderer implements ExceptionRendererInterface
+final class PlainTextExceptionRenderer implements ExceptionRendererInterface
 {
+    use TitleRendererTrait;
+
     /**
      * @return array<string>
      */
@@ -16,32 +18,30 @@ class PlainTextExceptionRenderer implements ExceptionRendererInterface
         return ['text/plain'];
     }
 
-    public function render(Throwable $exception, bool $debug = false): string
+    public function render(Throwable $exception, bool $debug = false, ?string $defaultMessage = null): string
     {
-        return $this->renderException($exception, $debug);
+        $title = $this->renderTitle($exception, $debug, $defaultMessage ?? self::DEFAULT_MESSAGE);
+
+        return $this->renderException($exception, $debug, $title);
     }
 
-    private function renderTitle(Throwable $exception): string
+    private function renderException(Throwable $exception, bool $debug, string $defaultMessage): string
     {
-        return ('' !== $exception->getMessage()
-            ? $exception->getMessage() : 'An error ocurred') . PHP_EOL;
-    }
+        if (false === $debug) {
+            return $defaultMessage;
+        }
 
-    private function renderException(Throwable $exception, bool $debug = false): string
-    {
-        $text = $this->renderTitle($exception);
+        $text = $defaultMessage . PHP_EOL;
 
-        if ($debug) {
-            $text .= PHP_EOL;
-            $text .= 'Code: ' . $exception->getCode() . PHP_EOL;
-            $text .= 'File: ' . $exception->getFile() . PHP_EOL;
-            $text .= 'Line: ' . $exception->getLine() . PHP_EOL;
-            $text .= PHP_EOL;
-            $text .= $exception->getTraceAsString() . PHP_EOL;
+        $text .= PHP_EOL;
+        $text .= 'Code: ' . $exception->getCode() . PHP_EOL;
+        $text .= 'File: ' . $exception->getFile() . PHP_EOL;
+        $text .= 'Line: ' . $exception->getLine() . PHP_EOL;
+        $text .= PHP_EOL;
+        $text .= $exception->getTraceAsString() . PHP_EOL;
 
-            if ($exception->getPrevious()) {
-                $text .= $this->renderException($exception->getPrevious(), true);
-            }
+        if (null !== $previous = $exception->getPrevious()) {
+            $text .= $this->renderException($previous, true, $previous->getMessage());
         }
 
         return $text;

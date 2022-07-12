@@ -6,8 +6,10 @@ namespace Thingston\Http\Exception\Renderer;
 
 use Throwable;
 
-class JsonExceptionRenderer implements ExceptionRendererInterface
+final class JsonExceptionRenderer implements ExceptionRendererInterface
 {
+    use TitleRendererTrait;
+
     /**
      * @return array<string>
      */
@@ -16,37 +18,42 @@ class JsonExceptionRenderer implements ExceptionRendererInterface
         return ['application/json'];
     }
 
-    public function render(Throwable $exception, bool $debug = false): string
+    public function render(Throwable $exception, bool $debug = false, ?string $defaultMessage = null): string
     {
-        return json_encode($this->renderException($exception, $debug)) ?: $this->renderTitle($exception);
-    }
+        if (null === $defaultMessage) {
+            $defaultMessage = self::DEFAULT_MESSAGE;
+        }
 
-    private function renderTitle(Throwable $exception): string
-    {
-        return '' !== $exception->getMessage()
-            ? $exception->getMessage() : 'An error ocurred';
+        $title = $this->renderTitle($exception, $debug, $defaultMessage);
+        $json = json_encode($this->renderException($exception, $debug, $title));
+        $fallback = sprintf('{"message":"%s"}', addslashes($title));
+
+        return $json ?: $fallback;
     }
 
     /**
      * @param Throwable $exception
      * @param bool $debug
+     * @param string $defaultMessage
      * @return array<string, mixed>
      */
-    private function renderException(Throwable $exception, bool $debug = false): array
+    private function renderException(Throwable $exception, bool $debug, string $defaultMessage): array
     {
         $data = [
-            'message' => $this->renderTitle($exception),
+            'message' => $defaultMessage,
         ];
 
-        if ($debug) {
-            $data['code'] = $exception->getCode();
-            $data['file'] = $exception->getFile();
-            $data['line'] = $exception->getLine();
-            $data['trace'] = $exception->getTrace();
+        if (false === $debug) {
+            return $data;
+        }
 
-            if ($exception->getPrevious()) {
-                $data['previous'] = $this->renderException($exception->getPrevious());
-            }
+        $data['code'] = $exception->getCode();
+        $data['file'] = $exception->getFile();
+        $data['line'] = $exception->getLine();
+        $data['trace'] = $exception->getTrace();
+
+        if (null !== $previous = $exception->getPrevious()) {
+            $data['previous'] = $this->renderException($previous, true, $previous->getMessage());
         }
 
         return $data;
