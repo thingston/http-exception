@@ -538,7 +538,7 @@
         },
         {
             "name": "thingston/settings",
-            "version": "v1.3.3",
+            "version": "v1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/settings.git",
