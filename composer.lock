@@ -952,16 +952,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.20",
+            "version": "9.2.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "af7463c955007de36db0c5e26d03e2f933c2e980"
+                "reference": "3f893e19712bb0c8bc86665d1562e9fd509c4ef0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/af7463c955007de36db0c5e26d03e2f933c2e980",
-                "reference": "af7463c955007de36db0c5e26d03e2f933c2e980",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/3f893e19712bb0c8bc86665d1562e9fd509c4ef0",
+                "reference": "3f893e19712bb0c8bc86665d1562e9fd509c4ef0",
                 "shasum": ""
             },
             "require": {
@@ -1017,7 +1017,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.20"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.21"
             },
             "funding": [
                 {
@@ -1025,7 +1025,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-13T07:49:28+00:00"
+            "time": "2022-12-14T13:26:54+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3194,16 +3194,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.40",
+            "version": "v1.1.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "b6884951cadd1bcd57965c3a7944185d3b4b7dd4"
+                "reference": "927dc733ef33d68aa69be83dcc7f735274ac4d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/b6884951cadd1bcd57965c3a7944185d3b4b7dd4",
-                "reference": "b6884951cadd1bcd57965c3a7944185d3b4b7dd4",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/927dc733ef33d68aa69be83dcc7f735274ac4d5e",
+                "reference": "927dc733ef33d68aa69be83dcc7f735274ac4d5e",
                 "shasum": ""
             },
             "require": {
@@ -3249,7 +3249,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2022-12-10T03:39:59+00:00"
+            "time": "2022-12-14T03:41:35+00:00"
         }
     ],
     "aliases": [],
