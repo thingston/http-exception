@@ -893,16 +893,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.9.16",
+            "version": "1.9.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "922e2689bb180575d0f57de0443c431a5a698e8f"
+                "reference": "204e459e7822f2c586463029f5ecec31bb45a1f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/922e2689bb180575d0f57de0443c431a5a698e8f",
-                "reference": "922e2689bb180575d0f57de0443c431a5a698e8f",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/204e459e7822f2c586463029f5ecec31bb45a1f2",
+                "reference": "204e459e7822f2c586463029f5ecec31bb45a1f2",
                 "shasum": ""
             },
             "require": {
@@ -932,7 +932,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.9.16"
+                "source": "https://github.com/phpstan/phpstan/tree/1.9.17"
             },
             "funding": [
                 {
@@ -948,7 +948,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-07T10:42:21+00:00"
+            "time": "2023-02-08T12:25:00+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -3194,16 +3194,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.62",
+            "version": "v1.1.63",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "004c03571c52566c428acb036804fb444eee6fae"
+                "reference": "0d843356035b1bf88d8a38d54d005933ff6dc898"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/004c03571c52566c428acb036804fb444eee6fae",
-                "reference": "004c03571c52566c428acb036804fb444eee6fae",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/0d843356035b1bf88d8a38d54d005933ff6dc898",
+                "reference": "0d843356035b1bf88d8a38d54d005933ff6dc898",
                 "shasum": ""
             },
             "require": {
@@ -3249,7 +3249,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2023-02-05T03:40:00+00:00"
+            "time": "2023-02-08T03:41:12+00:00"
         }
     ],
     "aliases": [],
