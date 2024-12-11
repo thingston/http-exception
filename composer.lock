@@ -2848,8 +2848,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -3208,16 +3208,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.234",
+            "version": "v1.1.235",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "7dcc1c8a444ea4169db9788810247db1f4410627"
+                "reference": "875e85c87648f95b74696967986a6e7d3b97c7a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/7dcc1c8a444ea4169db9788810247db1f4410627",
-                "reference": "7dcc1c8a444ea4169db9788810247db1f4410627",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/875e85c87648f95b74696967986a6e7d3b97c7a6",
+                "reference": "875e85c87648f95b74696967986a6e7d3b97c7a6",
                 "shasum": ""
             },
             "require": {
@@ -3263,7 +3263,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2024-12-06T03:51:42+00:00"
+            "time": "2024-12-10T03:52:43+00:00"
         }
     ],
     "aliases": [],
