@@ -124,16 +124,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "3.8.1",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4"
+                "reference": "10d85740180ecba7896c87e06a166e0c95a0e3b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/10d85740180ecba7896c87e06a166e0c95a0e3b6",
+                "reference": "10d85740180ecba7896c87e06a166e0c95a0e3b6",
                 "shasum": ""
             },
             "require": {
@@ -211,7 +211,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/3.8.1"
+                "source": "https://github.com/Seldaek/monolog/tree/3.9.0"
             },
             "funding": [
                 {
@@ -223,7 +223,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-05T17:15:07+00:00"
+            "time": "2025-03-24T10:02:05+00:00"
         },
         {
             "name": "psr/container",
@@ -3213,16 +3213,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.253",
+            "version": "v1.1.254",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "e3ab6e003a5df9bab7ad2792bade5ca878762488"
+                "reference": "eacce2c38edf1114bb9716c599fadb2ce50655e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/e3ab6e003a5df9bab7ad2792bade5ca878762488",
-                "reference": "e3ab6e003a5df9bab7ad2792bade5ca878762488",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/eacce2c38edf1114bb9716c599fadb2ce50655e4",
+                "reference": "eacce2c38edf1114bb9716c599fadb2ce50655e4",
                 "shasum": ""
             },
             "require": {
@@ -3268,7 +3268,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2025-03-19T03:48:19+00:00"
+            "time": "2025-03-24T03:50:38+00:00"
         }
     ],
     "aliases": [],
