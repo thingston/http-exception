@@ -666,16 +666,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.13.3",
+            "version": "1.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "faed855a7b5f4d4637717c2b3863e277116beb36"
+                "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/faed855a7b5f4d4637717c2b3863e277116beb36",
-                "reference": "faed855a7b5f4d4637717c2b3863e277116beb36",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/07d290f0c47959fd5eed98c95ee5602db07e0b6a",
+                "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a",
                 "shasum": ""
             },
             "require": {
@@ -714,7 +714,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.3"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.4"
             },
             "funding": [
                 {
@@ -722,7 +722,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-05T12:25:42+00:00"
+            "time": "2025-08-01T08:46:24+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3233,16 +3233,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.274",
+            "version": "v1.1.275",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "92b9a6e600dab7d0c0b8270f1c4c5d4b129d180d"
+                "reference": "9ca458b4a58b8e9df05656e4c2e8a4e7ccecce08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/92b9a6e600dab7d0c0b8270f1c4c5d4b129d180d",
-                "reference": "92b9a6e600dab7d0c0b8270f1c4c5d4b129d180d",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/9ca458b4a58b8e9df05656e4c2e8a4e7ccecce08",
+                "reference": "9ca458b4a58b8e9df05656e4c2e8a4e7ccecce08",
                 "shasum": ""
             },
             "require": {
@@ -3288,7 +3288,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2025-07-28T04:31:23+00:00"
+            "time": "2025-08-01T04:39:07+00:00"
         }
     ],
     "aliases": [],
