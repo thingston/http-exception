@@ -2389,16 +2389,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.13.3",
+            "version": "3.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "5be16e10d07a2b0c629a8fc52c653fd57458bdf8"
+                "reference": "ad545ea9c1b7d270ce0fc9cbfb884161cd706119"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/5be16e10d07a2b0c629a8fc52c653fd57458bdf8",
-                "reference": "5be16e10d07a2b0c629a8fc52c653fd57458bdf8",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/ad545ea9c1b7d270ce0fc9cbfb884161cd706119",
+                "reference": "ad545ea9c1b7d270ce0fc9cbfb884161cd706119",
                 "shasum": ""
             },
             "require": {
@@ -2469,7 +2469,7 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2025-09-04T19:19:52+00:00"
+            "time": "2025-09-05T05:47:09+00:00"
         },
         {
             "name": "symfony/console",
@@ -3285,16 +3285,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.281",
+            "version": "v1.1.282",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "f0284473ebaa7f7976661c6c8c2abaf51eb2dc4b"
+                "reference": "ac79eb372f96e1b41f7196ede5acf3a2f3073f8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/f0284473ebaa7f7976661c6c8c2abaf51eb2dc4b",
-                "reference": "f0284473ebaa7f7976661c6c8c2abaf51eb2dc4b",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/ac79eb372f96e1b41f7196ede5acf3a2f3073f8f",
+                "reference": "ac79eb372f96e1b41f7196ede5acf3a2f3073f8f",
                 "shasum": ""
             },
             "require": {
@@ -3340,7 +3340,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2025-08-30T03:46:30+00:00"
+            "time": "2025-09-05T03:47:46+00:00"
         }
     ],
     "aliases": [],
