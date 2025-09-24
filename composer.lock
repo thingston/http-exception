@@ -1279,16 +1279,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.27",
+            "version": "9.6.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "0a9aa4440b6a9528cf360071502628d717af3e0a"
+                "reference": "a8017241a554a259997a5285eee5d10c69ff7187"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0a9aa4440b6a9528cf360071502628d717af3e0a",
-                "reference": "0a9aa4440b6a9528cf360071502628d717af3e0a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a8017241a554a259997a5285eee5d10c69ff7187",
+                "reference": "a8017241a554a259997a5285eee5d10c69ff7187",
                 "shasum": ""
             },
             "require": {
@@ -1313,7 +1313,7 @@
                 "sebastian/comparator": "^4.0.9",
                 "sebastian/diff": "^4.0.6",
                 "sebastian/environment": "^5.1.5",
-                "sebastian/exporter": "^4.0.6",
+                "sebastian/exporter": "^4.0.7",
                 "sebastian/global-state": "^5.0.8",
                 "sebastian/object-enumerator": "^4.0.4",
                 "sebastian/resource-operations": "^3.0.4",
@@ -1362,7 +1362,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.27"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.28"
             },
             "funding": [
                 {
@@ -1386,7 +1386,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-09-14T06:18:03+00:00"
+            "time": "2025-09-23T06:20:12+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -3297,16 +3297,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.286",
+            "version": "v1.1.287",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "b8422782c602a6a265e7baf7a71229a5ebb857ac"
+                "reference": "1069db89dd5088f544c3593b3c47ed463e8ecd79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/b8422782c602a6a265e7baf7a71229a5ebb857ac",
-                "reference": "b8422782c602a6a265e7baf7a71229a5ebb857ac",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/1069db89dd5088f544c3593b3c47ed463e8ecd79",
+                "reference": "1069db89dd5088f544c3593b3c47ed463e8ecd79",
                 "shasum": ""
             },
             "require": {
@@ -3352,7 +3352,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2025-09-17T03:46:02+00:00"
+            "time": "2025-09-23T03:47:17+00:00"
         }
     ],
     "aliases": [],
