@@ -2475,16 +2475,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v6.4.27",
+            "version": "v6.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "13d3176cf8ad8ced24202844e9f95af11e2959fc"
+                "reference": "1b2813049506b39eb3d7e64aff033fd5ca26c97e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/13d3176cf8ad8ced24202844e9f95af11e2959fc",
-                "reference": "13d3176cf8ad8ced24202844e9f95af11e2959fc",
+                "url": "https://api.github.com/repos/symfony/console/zipball/1b2813049506b39eb3d7e64aff033fd5ca26c97e",
+                "reference": "1b2813049506b39eb3d7e64aff033fd5ca26c97e",
                 "shasum": ""
             },
             "require": {
@@ -2549,7 +2549,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v6.4.27"
+                "source": "https://github.com/symfony/console/tree/v6.4.30"
             },
             "funding": [
                 {
@@ -2569,7 +2569,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-06T10:25:16+00:00"
+            "time": "2025-12-05T13:47:41+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3291,16 +3291,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.300",
+            "version": "v1.1.301",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "2c8a0cf60172df8e8193529d41b8a9072dd51a47"
+                "reference": "d84c0d0828bac2a7ab03f8b15511ef7fcb4b1202"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/2c8a0cf60172df8e8193529d41b8a9072dd51a47",
-                "reference": "2c8a0cf60172df8e8193529d41b8a9072dd51a47",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/d84c0d0828bac2a7ab03f8b15511ef7fcb4b1202",
+                "reference": "d84c0d0828bac2a7ab03f8b15511ef7fcb4b1202",
                 "shasum": ""
             },
             "require": {
@@ -3346,7 +3346,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2025-12-04T04:04:41+00:00"
+            "time": "2025-12-07T04:09:41+00:00"
         }
     ],
     "aliases": [],
