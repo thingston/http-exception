@@ -3365,16 +3365,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.327",
+            "version": "v1.1.328",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "7a08308f0ae333d008b5cc8baa4f7091cf9b4548"
+                "reference": "7b4beff9d2e022b4ae27c6f8b9a9a94ca17c13c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/7a08308f0ae333d008b5cc8baa4f7091cf9b4548",
-                "reference": "7a08308f0ae333d008b5cc8baa4f7091cf9b4548",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/7b4beff9d2e022b4ae27c6f8b9a9a94ca17c13c7",
+                "reference": "7b4beff9d2e022b4ae27c6f8b9a9a94ca17c13c7",
                 "shasum": ""
             },
             "require": {
@@ -3420,7 +3420,7 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2026-08-12T05:15:04+00:00"
+            "time": "2026-08-23T04:10:28+00:00"
         }
     ],
     "aliases": [],
