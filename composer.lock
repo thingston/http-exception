@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.13.2",
+            "version": "2.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "adee536f95101929f262b8c59e8a61472f347d58"
+                "reference": "6d3cd8285a97eaa352956a4ada92fa03ecce1c4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/adee536f95101929f262b8c59e8a61472f347d58",
-                "reference": "adee536f95101929f262b8c59e8a61472f347d58",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/6d3cd8285a97eaa352956a4ada92fa03ecce1c4e",
+                "reference": "6d3cd8285a97eaa352956a4ada92fa03ecce1c4e",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.13.2"
+                "source": "https://github.com/guzzle/psr7/tree/2.13.3"
             },
             "funding": [
                 {
@@ -123,8 +123,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-17T23:49:46+00:00",
-            "published-time": "2026-10-17T23:51:00+00:00"
+            "time": "2026-11-12T15:57:42+00:00",
+            "published-time": "2026-11-12T15:58:42+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1454,16 +1454,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.38",
+            "version": "9.6.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "8b5f757e8e92071bfdbfa93943f94f84c4e31007"
+                "reference": "133394556c813b61aa3481a87bef8419d8ec95c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8b5f757e8e92071bfdbfa93943f94f84c4e31007",
-                "reference": "8b5f757e8e92071bfdbfa93943f94f84c4e31007",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/133394556c813b61aa3481a87bef8419d8ec95c0",
+                "reference": "133394556c813b61aa3481a87bef8419d8ec95c0",
                 "shasum": ""
             },
             "require": {
@@ -1537,7 +1537,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.38"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.39"
             },
             "funding": [
                 {
@@ -1545,8 +1545,8 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-10-05T05:44:26+00:00",
-            "published-time": "2026-10-05T05:45:23+00:00"
+            "time": "2026-11-13T11:05:34+00:00",
+            "published-time": "2026-11-13T11:06:33+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -3415,16 +3415,16 @@
         },
         {
             "name": "thingston/coverage-check",
-            "version": "v1.1.340",
+            "version": "v1.1.341",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thingston/coverage-check.git",
-                "reference": "c5f836c5d0cf33f5f5cb5449c58b4a91e49ae4af"
+                "reference": "97d342e09dd260dfefc4a66d77a9a1c0c1abdc15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/c5f836c5d0cf33f5f5cb5449c58b4a91e49ae4af",
-                "reference": "c5f836c5d0cf33f5f5cb5449c58b4a91e49ae4af",
+                "url": "https://api.github.com/repos/thingston/coverage-check/zipball/97d342e09dd260dfefc4a66d77a9a1c0c1abdc15",
+                "reference": "97d342e09dd260dfefc4a66d77a9a1c0c1abdc15",
                 "shasum": ""
             },
             "require": {
@@ -3470,8 +3470,8 @@
                 "issues": "https://github.com/thingston/coverage-check/issues",
                 "source": "https://github.com/thingston/coverage-check"
             },
-            "time": "2026-11-06T11:24:04+00:00",
-            "published-time": "2026-11-06T11:24:10+00:00"
+            "time": "2026-11-12T11:43:43+00:00",
+            "published-time": "2026-11-12T11:43:50+00:00"
         }
     ],
     "aliases": [],
